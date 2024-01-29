@@ -1,4 +1,6 @@
 {
+    "name": "jean-maxime/symfony7-starter-kit",
+    "description": "Symfony 7 Starter Kit",
     "type": "project",
     "license": "proprietary",
     "minimum-stability": "stable",
