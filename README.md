@@ -1,6 +1,6 @@
-## Symfony 7 starter kit
+## Symfony 7 Starter Kit
 
-Ce starter kit est basé sur le framework Symfony 7.0.* et utilise les composants suivants :
+This starter kit is based on the Symfony 7.0.* framework and utilizes the following components:
 
 - [Symfony 7.0.*](https://symfony.com/)
 - [AssetMapper](https://symfony.com/doc/current/frontend/asset_mapper.html)
@@ -9,34 +9,27 @@ Ce starter kit est basé sur le framework Symfony 7.0.* et utilise les composant
 - [Mailer](https://symfony.com/doc/current/mailer.html)
 - [Symfony UX Turbo](https://symfony.com/bundles/ux-turbo/current/index.html)
 
-## Installation :
+## Installation:
 
-<p>Le repository est fait de manière à pouvoir être cloné directement et à pouvoir être utilisé comme base de projet.</p>
-<p>Vous pouvez utiliser Docker ou installer le projet directement sur votre machine.</p>
+<p>The repository is designed to be cloned directly and used as a project base.</p>
+<p>You can use Docker or install the project directly on your machine.</p>
 
-## À faire après l'installation :
+## Steps to take after installation:
 
-- Modifier le fichier .env pour configurer la base de données et le mailer
-- Lancer la commande `bin/console doctrine:migrations:migrate` pour créer les tables en base de données
-- Lancer la commande `bin/console asset-map:compile` pour compiler les assets
-- Lancer la commande `bin/console messenger:consume async` pour lancer le worker de vérification des emails
-- Modifier le fichier `src/Controller/RegistrationController.php` pour modifier les informations de l'expéditeur des
-  emails
-- Modifier le fichier `src/Service/MailerService.php` pour modifier les informations de l'expéditeur des
-  emails
+- Modify the .env file to configure the database and mailer settings
+- Run the command `bin/console doctrine:migrations:migrate` to create the database tables
+- Run the command `bin/console messenger:consume async` to start the email verification worker
+- Modify the file `src/Service/MailerService.php` to change the sender's email information
 
-## Fonctionnalités :
+## Features:
 
-- [x] Initialisation du projet
-- [x] Configuration de la base de données
-- [x] Configuration de l'asset mapper
-- [x] Gestion des utilisateurs (connexion, inscription, mot de passe oublié)
+- [x] Project initialization
+- [x] Database configuration
+- [x] Asset mapper configuration
+- [x] User management (login, registration, forgot password)
 
-## Commandes utiles :
+## Useful commands:
 
-- `bin/console doctrine:migrations:migrate` : Pour créer les tables en base de données
-- `bin/console asset-map:compile` : Pour compiler les assets avant déploiement
-- `bin/console messenger:consume async` : Pour lancer le worker de vérification d'envoi des emails
-
-
-
+- `bin/console doctrine:migrations:migrate`: To create database tables
+- `bin/console asset-map:compile`: To compile assets before deployment
+- `bin/console messenger:consume async`: To start the email delivery verification worker
