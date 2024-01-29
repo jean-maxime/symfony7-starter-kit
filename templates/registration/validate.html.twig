@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Validez votre compte{% endblock %}
+
+{% block body %}
+    {% for flash_error in app.flashes('verify_email_error') %}
+        {{ include('_flashe.html.twig', {message: flash_error, style: 'error'}) }}
+    {% endfor %}
+
+    <h1>Validez votre compte</h1>
+
+    <p>Pour valider votre compte, veuillez cliquer sur le lien que vous avez reçu par email.</p>
+{% endblock %}

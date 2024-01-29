@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Se connecter{% endblock %}
+
+{% block body %}
+    <form method="post">
+        {% if error %}
+            {{ include('_flashe.html.twig', {message: error.messageKey|trans, style: 'error'}) }}
+        {% endif %}
+
+        <h1>Se connecter</h1>
+        <label for="username">Email</label>
+        <input type="email" value="{{ last_username }}" name="_username" id="username" autocomplete="email" required autofocus>
+        <label for="password">Mot de passe</label>
+        <input type="password" name="_password" id="password" autocomplete="current-password" required>
+
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+        <a href="{{ path('app_forgot_password') }}">Mot de passe oublié</a>
+
+        <button type="submit">Se connecter</button>
+    </form>
+{% endblock %}

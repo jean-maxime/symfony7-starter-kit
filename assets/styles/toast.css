@@ -1,0 +1,96 @@
+#toast-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: auto;
+    height: auto;
+}
+
+#toast-container > .alert {
+    padding: 10px;
+    margin: 10px;
+    line-height: 1.8;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: 400;
+    animation-duration: 1s;
+    animation-name: slidein;
+}
+
+#toast-container > .alert.hide {
+    animation-duration: 1s;
+    animation-name: slideout;
+}
+
+#toast-container > .alert > .alert-text {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 16px;
+}
+
+#toast-container > .alert > .alert-text > svg {
+    margin-right: 10px;
+}
+
+#toast-container > .alert > .alert-close {
+    float: right;
+    padding: 6px 0 10px 10px;
+    font-size: 10px;
+}
+
+#toast-container > .alert.info {
+    background-color: #EEE;
+    border: 1px solid #DDD;
+    color: #999;
+}
+
+#toast-container > .alert.success {
+    background-color: #47D764;
+    border: 1px solid #226730;
+    color: #FFF;
+}
+
+#toast-container > .alert.info {
+    background-color: #2F86EB;
+    border: 1px solid #12355e;
+    color: #FFF;
+}
+
+#toast-container > .alert.warning {
+    background-color: #FFC021;
+    border: 1px solid #70540f;
+    color: #FFF;
+}
+
+#toast-container > .alert.error {
+    background-color: #ff355b;
+    border: 1px solid #691424;
+    color: #FFF;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 120%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@keyframes slideout {
+    from {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    to {
+        margin-left: 120%;
+        width: 300%;
+    }
+}

@@ -1,0 +1,17 @@
+<div id="toast-container">
+    {% for flashMessage in app.session.flashbag.get('warning') %}
+        {{ include('_flashe.html.twig', {message: flashMessage, style: 'warning'}) }}
+    {% endfor %}
+
+    {% for flashMessage in app.session.flashbag.get('error') %}
+        {{ include('_flashe.html.twig', {message: flashMessage, style: 'error'}) }}
+    {% endfor %}
+
+    {% for flashMessage in app.session.flashbag.get('success') %}
+        {{ include('_flashe.html.twig', {message: flashMessage, style: 'success'}) }}
+    {% endfor %}
+
+    {% for flashMessage in app.session.flashbag.get('info') %}
+        {{ include('_flashe.html.twig', {message: flashMessage, style: 'info'}) }}
+    {% endfor %}
+</div>

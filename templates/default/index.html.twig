@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bievenue !{% endblock %}
+
+{% block body %}
+    <h1>Bienvenue sur votre application</h1>
+
+    <p>Soyez libre de commencer votre projet</p>
+    <p>Vous pouvez créer un nouvel utilisateur en
+        <a href="{{ path('app_register') }}">cliquant ici</a>
+    </p>
+
+    {% if not app.user %}
+        <p>Vous pouvez vous connecter en
+            <a href="{{ path('app_login') }}">cliquant ici</a>
+        </p>
+    {% else %}
+        <div>
+            Vous êtes connecté en tant que {{ app.user.userIdentifier }},
+            <a href="{{ path('app_logout') }}">Se déconnecter</a>
+        </div>
+    {% endif %}
+{% endblock %}
